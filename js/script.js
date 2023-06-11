@@ -15,14 +15,10 @@ const renderCount = (number, type = '') => {
         count.textContent = `${number}`
         stateNumber.number += 1
     }
+
     if (stateNumber.number > number) {
-        if (stateNumber.number === 0) {
-            count.textContent = `${0}`
-            stateNumber.number = 0
-        } else {
-            count.textContent = `${number}`
-            stateNumber.number -= 1
-        }
+        count.textContent = `${number}`
+        stateNumber.number -= 1
     }
 }
 add.addEventListener('click', () => {
